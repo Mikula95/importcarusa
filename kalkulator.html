@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kalkulator cijene uvoza automobila iz Amerike — Importcarsusa. Izračunaj PDV, carinu, transport i ukupnu cijenu dostave u BiH.">
+  <title>Kalkulator Uvoza — Importcarsusa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Glavna navigacija">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Importcarsusa naslovna">
+          <img src="images/import_cars_usa.jpg" alt="Importcarsusa" class="logo-img">
+        </a>
+
+        <ul class="nav-menu" role="list">
+          <li><a href="index.html"      class="nav-link">Naslovna</a></li>
+          <li><a href="about.html"      class="nav-link">O Nama</a></li>
+          <li><a href="inventory.html"  class="nav-link">Vozila</a></li>
+          <li><a href="kalkulator.html" class="nav-link active">Kalkulator</a></li>
+          <li><a href="contact.html"    class="nav-link">Kontakt</a></li>
+          <li><a href="contact.html"    class="nav-link nav-cta">Upit za Vozilo</a></li>
+          <li class="nav-phone" aria-label="Telefon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <a href="tel:+38765329696">+387 65 329 696</a>
+          </li>
+        </ul>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ PAGE HERO ════════════════════════ -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="title-bar" style="margin: 0 auto 12px;"></div>
+      <h1>Kalkulator <span style="color:var(--accent)">Uvoza</span></h1>
+      <p>Izračunaj ukupnu cijenu automobila iz Amerike do Banje Luke</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CALCULATOR ══════════════════════ -->
+  <main class="calc-page">
+    <div class="container">
+
+      <div class="calc-grid">
+
+        <!-- ── LEFT: Calculator form ── -->
+        <div class="calc-form-wrap fade-in">
+          <div class="title-bar"></div>
+          <h2>Unesite <span>Podatke</span></h2>
+          <p class="calc-intro">
+            Unesite cijenu automobila i kurs USD/BAM da biste dobili
+            procjenu ukupnih troškova uvoza Chicago → Banja Luka.
+          </p>
+
+          <form id="calcForm" novalidate aria-label="Kalkulator uvoza">
+
+            <div class="calc-field-group">
+              <label class="form-label" for="carPrice">
+                Cijena automobila (USD)
+                <span class="form-hint">Cijena vozila u SAD, bez transporta</span>
+              </label>
+              <div class="input-prefix-wrap">
+                <span class="input-prefix">$</span>
+                <input
+                  class="form-input calc-input"
+                  id="carPrice"
+                  type="number"
+                  min="500"
+                  max="500000"
+                  step="100"
+                  placeholder="npr. 15000"
+                  required
+                  aria-describedby="carPriceHint"
+                >
+              </div>
+            </div>
+
+            <div class="calc-field-group">
+              <label class="form-label" for="exchangeRate">
+                Kurs USD → BAM
+                <span class="form-hint">Trenutni kurs (npr. 1.85 BAM za 1 USD)</span>
+              </label>
+              <div class="input-prefix-wrap">
+                <span class="input-prefix" style="font-size:0.8rem">BAM</span>
+                <input
+                  class="form-input calc-input"
+                  id="exchangeRate"
+                  type="number"
+                  min="1"
+                  max="5"
+                  step="0.01"
+                  value="1.85"
+                  required
+                  aria-describedby="exchangeRateHint"
+                >
+              </div>
+            </div>
+
+            <!-- Fixed values info -->
+            <div class="calc-fixed-info">
+              <h4>Fiksni parametri uvoza</h4>
+              <div class="fixed-params">
+                <div class="fixed-param">
+                  <span class="fp-label">🚢 Transport Chicago → Banja Luka</span>
+                  <span class="fp-value">$3.000</span>
+                </div>
+                <div class="fixed-param">
+                  <span class="fp-label">🏛️ Carina (BiH)</span>
+                  <span class="fp-value">15%</span>
+                </div>
+                <div class="fixed-param">
+                  <span class="fp-label">🧾 PDV</span>
+                  <span class="fp-value">17%</span>
+                </div>
+                <div class="fixed-param">
+                  <span class="fp-label">🔧 Importcarsusa usluga</span>
+                  <span class="fp-value">10%</span>
+                </div>
+                <div class="fixed-param">
+                  <span class="fp-label">🔑 Homologacija</span>
+                  <span class="fp-value">1.530 KM</span>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary calc-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="18" rx="2"/>
+                <path d="M8 7h8M8 12h5M8 17h3"/>
+              </svg>
+              Izračunaj Cijenu
+            </button>
+
+          </form>
+        </div>
+
+        <!-- ── RIGHT: Result breakdown ── -->
+        <div class="calc-result-wrap fade-in fade-in-delay-1" id="calcResult" aria-live="polite">
+
+          <!-- Empty state -->
+          <div class="calc-empty" id="calcEmpty">
+            <div class="calc-empty-icon" aria-hidden="true">🚗</div>
+            <h3>Unesite cijenu vozila</h3>
+            <p>Rezultat će se prikazati ovdje čim unesete cijenu automobila i pritisnete dugme.</p>
+          </div>
+
+          <!-- Result state (hidden until calculated) -->
+          <div class="calc-breakdown" id="calcBreakdown" style="display:none">
+
+            <div class="calc-result-header">
+              <div class="title-bar"></div>
+              <h2>Ukupna <span>Cijena</span></h2>
+              <p class="calc-route">Chicago <span>→</span> Banja Luka</p>
+            </div>
+
+            <div class="calc-rows">
+              <div class="calc-row">
+                <span class="cr-label">
+                  <span class="cr-icon">🚗</span> Cijena vozila (SAD)
+                </span>
+                <span class="cr-value" id="rCarPrice">—</span>
+              </div>
+              <div class="calc-row">
+                <span class="cr-label">
+                  <span class="cr-icon">🚢</span> Transport (Chicago → BL)
+                </span>
+                <span class="cr-value" id="rShipping">$3.000</span>
+              </div>
+              <div class="calc-row calc-row-sub">
+                <span class="cr-label cr-sub">
+                  Carinska vrijednost (vozilo + transport)
+                </span>
+                <span class="cr-value cr-sub" id="rCustomsBase">—</span>
+              </div>
+              <div class="calc-row">
+                <span class="cr-label">
+                  <span class="cr-icon">🏛️</span> Carina 15%
+                </span>
+                <span class="cr-value" id="rCarina">—</span>
+              </div>
+              <div class="calc-row">
+                <span class="cr-label">
+                  <span class="cr-icon">🧾</span> PDV 17%
+                  <small class="cr-note">(od carinska vr. + carina)</small>
+                </span>
+                <span class="cr-value" id="rPDV">—</span>
+              </div>
+              <div class="calc-row">
+                <span class="cr-label">
+                  <span class="cr-icon">🔧</span> Importcarsusa usluga 10%
+                  <small class="cr-note">(od cijene vozila)</small>
+                </span>
+                <span class="cr-value" id="rUsluga">—</span>
+              </div>
+              <div class="calc-row">
+                <span class="cr-label">
+                  <span class="cr-icon">🔑</span> Homologacija
+                  <small class="cr-note">(fiksno, KM)</small>
+                </span>
+                <span class="cr-value" id="rHomologacija">—</span>
+              </div>
+            </div>
+
+            <div class="calc-divider"></div>
+
+            <div class="calc-total-usd">
+              <span>Ukupno (USD)</span>
+              <span id="rTotalUSD" class="total-usd-value">—</span>
+            </div>
+
+            <div class="calc-total-bam">
+              <div class="total-bam-label">Ukupno (BAM)</div>
+              <div id="rTotalBAM" class="total-bam-value">—</div>
+              <div class="total-bam-note" id="rRateNote">po kursu 1 USD = 1.85 BAM</div>
+            </div>
+
+            <div class="calc-cta-row">
+              <a href="contact.html" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                Pošalji Upit
+              </a>
+              <button class="btn btn-outline" id="calcReset">
+                Ponovo Izračunaj
+              </button>
+            </div>
+
+            <p class="calc-disclaimer">
+              * Procjena je informativna. Tačan iznos carine i PDV-a utvrđuje
+              Uprava za indirektno oporezivanje BiH na osnovu carinske vrijednosti
+              vozila. Usluga Importcarsusa podliježe posebnom ugovoru.
+            </p>
+
+          </div>
+        </div>
+
+      </div><!-- /calc-grid -->
+
+      <!-- ── HOW IT WORKS ── -->
+      <section class="how-it-works fade-in" aria-label="Kako funkcioniše uvoz">
+        <div class="section-header" style="text-align:center; margin-bottom:40px">
+          <div class="title-bar" style="margin: 0 auto 8px;"></div>
+          <h2 class="section-title">Kako <span>Funkcioniše</span></h2>
+          <p class="section-subtitle">Korak po korak do vašeg američkog automobila u BiH</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-icon" aria-hidden="true">🔍</div>
+            <h3>Odabir vozila</h3>
+            <p>Pregledajte naš inventar ili nam recite koje vozilo tražite. Naš tim pronalazi vozilo po vašim zahtjevima u SAD.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-icon" aria-hidden="true">💰</div>
+            <h3>Procjena cijene</h3>
+            <p>Koristite kalkulator gore za brzu procjenu. Kontaktirajte nas za tačnu ponudu sa svim troškovima unaprijed — bez iznenađenja.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-icon" aria-hidden="true">🚢</div>
+            <h3>Transport</h3>
+            <p>Vozilo se ukrcava u Chicagu i brodskim kontejnerskim transportom dolazi do luke. Prosječno vrijeme: 6–8 sedmica.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <div class="step-icon" aria-hidden="true">🏛️</div>
+            <h3>Carina i PDV</h3>
+            <p>Naš tim se brine o kompletnoj carinskoj proceduri u BiH. Carina 15% + PDV 17% se plaća pri uvozu.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">05</div>
+            <div class="step-icon" aria-hidden="true">🔑</div>
+            <h3>Preuzimanje</h3>
+            <p>Vozilo se dostavlja direktno u Banju Luku. Vi preuzimate ključeve i svu dokumentaciju — spremno za registraciju.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">06</div>
+            <div class="step-icon" aria-hidden="true">📋</div>
+            <h3>Registracija</h3>
+            <p>Pomažemo pri pribavljanju potrebnih dokumenata za registraciju vozila u BiH. Koristite vozilo odmah!</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* ── Import Price Calculator ──────────────────────────── */
+    (function () {
+      const SHIPPING   = 3000;   // fixed USD
+      const CARINA_PCT = 0.15;   // 15%
+      const PDV_PCT    = 0.17;   // 17%
+      const USLUGA_PCT = 0.10;   // 10%
+      const HOMOLOGACIJA_BAM = 1530; // fixed KM
+
+      const form       = document.getElementById('calcForm');
+      const emptyEl    = document.getElementById('calcEmpty');
+      const breakdownEl= document.getElementById('calcBreakdown');
+      const resetBtn   = document.getElementById('calcReset');
+
+      function fmt(n, currency) {
+        return currency === 'BAM'
+          ? new Intl.NumberFormat('bs-BA', { style: 'currency', currency: 'BAM', minimumFractionDigits: 2 }).format(n)
+          : '$' + new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(n);
+      }
+
+      function calculate() {
+        const carPrice = parseFloat(document.getElementById('carPrice').value);
+        const rate     = parseFloat(document.getElementById('exchangeRate').value);
+
+        if (!carPrice || carPrice <= 0 || !rate || rate <= 0) return;
+
+        // Customs base = car price + shipping
+        const customsBase = carPrice + SHIPPING;
+
+        // Carina = 15% of customs base
+        const carina = customsBase * CARINA_PCT;
+
+        // PDV = 17% of (customs base + carina)
+        const pdv = (customsBase + carina) * PDV_PCT;
+
+        // Service fee = 10% of car price
+        const usluga = carPrice * USLUGA_PCT;
+
+        // Total
+        const totalUSD = carPrice + SHIPPING + carina + pdv + usluga;
+        const totalBAM = totalUSD * rate + HOMOLOGACIJA_BAM;
+
+        // Update DOM
+        document.getElementById('rCarPrice').textContent    = fmt(carPrice);
+        document.getElementById('rShipping').textContent    = fmt(SHIPPING);
+        document.getElementById('rCustomsBase').textContent = fmt(customsBase);
+        document.getElementById('rCarina').textContent      = fmt(carina);
+        document.getElementById('rPDV').textContent         = fmt(pdv);
+        document.getElementById('rUsluga').textContent      = fmt(usluga);
+        document.getElementById('rHomologacija').textContent = fmt(HOMOLOGACIJA_BAM, 'BAM');
+        document.getElementById('rTotalUSD').textContent    = fmt(totalUSD);
+        document.getElementById('rTotalBAM').textContent    = fmt(totalBAM, 'BAM');
+        document.getElementById('rRateNote').textContent    = `po kursu 1 USD = ${rate.toFixed(2)} BAM`;
+
+        // Show breakdown, hide empty
+        emptyEl.style.display     = 'none';
+        breakdownEl.style.display = '';
+
+        // Scroll into view on mobile
+        if (window.innerWidth < 900) {
+          breakdownEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        calculate();
+      });
+
+      // Live recalculate on input change if result is already shown
+      ['carPrice', 'exchangeRate'].forEach(id => {
+        document.getElementById(id).addEventListener('input', () => {
+          if (breakdownEl.style.display !== 'none') calculate();
+        });
+      });
+
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        document.getElementById('exchangeRate').value = '1.85';
+        emptyEl.style.display     = '';
+        breakdownEl.style.display = 'none';
+        document.getElementById('carPrice').focus();
+      });
+    })();
+  </script>
+</body>
+</html>

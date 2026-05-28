@@ -1,0 +1,679 @@
+﻿<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ponuda vozila — Importcarsusa, uvoz kvalitetnih automobila iz Amerike u Bosnu i Hercegovinu. 27+ vozila.">
+  <title>Vozila — Importcarsusa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Importcarsusa Home">
+          <img src="images/import_cars_usa.jpg" alt="Importcarsusa" class="logo-img">
+        </a>
+
+        <ul class="nav-menu" role="list">
+          <li><a href="index.html"      class="nav-link">Naslovna</a></li>
+          <li><a href="about.html"      class="nav-link">O Nama</a></li>
+          <li><a href="inventory.html"  class="nav-link active">Vozila</a></li>
+          <li><a href="kalkulator.html" class="nav-link">Kalkulator</a></li>
+          <li><a href="contact.html"    class="nav-link">Kontakt</a></li>
+          <li><a href="contact.html"    class="nav-link nav-cta">Upit za Vozilo</a></li>
+          <li class="nav-phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <a href="tel:+38765329696">+387 65 329 696</a>
+          </li>
+        </ul>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ PAGE HERO ════════════════════════ -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="title-bar" style="margin: 0 auto 12px;"></div>
+      <h1>Naša <span style="color:var(--accent)">Vozila</span></h1>
+      <p>27+ kvalitetnih polovnih vozila — direktno iz Amerike</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ INVENTORY ════════════════════════ -->
+  <main class="inventory-section">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" role="search" aria-label="Filter vehicles">
+        <div class="filter-group">
+          <label class="filter-label" for="searchInput">Pretraga</label>
+          <input class="filter-input" id="searchInput" type="search" placeholder="Godina, marka, model…" aria-label="Pretraga vozila">
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="filterMake">Marka</label>
+          <select class="filter-select" id="filterMake" aria-label="Filtriraj po marki">
+            <option value="">Sve Marke</option>
+            <option value="audi">Audi</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="ford">Ford</option>
+            <option value="land rover">Land Rover</option>
+            <option value="volkswagen">Volkswagen</option><option value="volvo">Volvo</option><option value="porsche">Porsche</option></select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="filterType">Tip</label>
+          <select class="filter-select" id="filterType" aria-label="Filtriraj po tipu">
+            <option value="">Svi Tipovi</option>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="truck">Pickup</option>
+            <option value="hatchback">Hatchback</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="filterPrice">Max Cijena</label>
+          <select class="filter-select" id="filterPrice" aria-label="Filtriraj po cijeni">
+            <option value="">Bilo koja</option>
+            <option value="5000">Do $5.000</option>
+            <option value="10000">Do $10.000</option>
+            <option value="15000">Do $15.000</option>
+            <option value="20000">Do $20.000</option>
+            <option value="25000">Do $25.000</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="results-count" id="resultCount" aria-live="polite">
+      Prikazano <strong>27</strong> od <strong>27</strong> vozila
+      </p>
+
+      <!-- Inventory Grid -->
+      <div class="full-inventory-grid" id="inventoryGrid" role="list">
+
+        <!-- SVG car icon snippet (reused inline) -->
+
+        <!-- ── AUDI ───────────────────────────────────────── -->
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="sedan" data-price="8495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-a3-2016.jpg" alt="2016 Audi A3 2.0T Premium Plus Sedan quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2016 Audi A3 2.0T Premium Plus Sedan quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">145,315 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Brilliant Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$8,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="sedan" data-price="9995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-a3-2015.jpg" alt="2015 Audi A3 2.0T Premium Sedan quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2015 Audi A3 2.0T Premium Sedan quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">113,135 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Beluga Brown</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$9,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="sedan" data-price="3995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-a3-2011.jpg" alt="2011 Audi A3 2.0T Premium S tronic">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Great Value</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2011 Audi A3 2.0T Premium S tronic</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">156,583 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Ibis White</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$3,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="sedan" data-price="18995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-a7-2016.jpg" alt="2016 Audi A7 TDI Premium Plus quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2016 Audi A7 TDI Premium Plus quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.0L V6 TURBO DIESEL</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">133,385 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Dakota Gray</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$18,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="sedan" data-price="23995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-a8-2019.jpg" alt="2019 Audi A8 L 3.0 TFSI quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-red">AWD</span><span class="badge badge-gold">Premium</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2019 Audi A8 L 3.0 TFSI quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.0L V6 SC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">109,070 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Interior</span><span class="spec-value">Black Valetta</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$23,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="suv" data-price="13495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-q7-2020.jpg" alt="2018 Audi Q5 2.0T Premium quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2018 Audi Q5 2.0T Premium quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">119,995 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">7-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Brilliant Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$13,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="suv" data-price="19995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-q7-2020.jpg" alt="2020 Audi Q7 Premium Plus 55 TFSI quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2020 Audi Q7 Premium Plus 55 TFSI quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.0L V6 Hybrid</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">108,312 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$19,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="suv" data-price="11495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-q7-2020.jpg" alt="2018 Audi Q7 2.0 Premium Plus quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2018 Audi Q7 2.0 Premium Plus quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">155,005 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Orca Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$11,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="suv" data-price="10995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-q7-2020.jpg" alt="2017 Audi Q7 3.0 Premium Plus quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2017 Audi Q7 3.0 Premium Plus quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.0L V6 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">169,362 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Night Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$10,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="suv" data-price="12995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-q7-2020.jpg" alt="2017 Audi Q7 3.0 Premium Plus quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2018 Audi Q7 2.0 Premium quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">137,519 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Carrara White</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$12,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="audi" data-type="suv" data-price="11995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/audi-q7-2020.jpg" alt="2017 Audi Q7 3.0 Premium Plus quattro">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2017 Audi Q7 3.0 Premium Plus quattro</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.0L V6 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">140,240 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Ink Blue</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$11,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CHEVROLET ───────────────────────────────────── -->
+
+        <article class="vehicle-card fade-in" data-make="chevrolet" data-type="suv" data-price="6495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/chevy-equinox-2012.jpg" alt="2012 Chevrolet Equinox 1LT AWD">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2012 Chevrolet Equinox 1LT AWD</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.4L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">103,471 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Red</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$6,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="chevrolet" data-type="sedan" data-price="3995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/chevy-sonic-2014.jpg" alt="2014 Chevrolet Sonic LS Auto Sedan">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Great Value</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2014 Chevrolet Sonic LS Auto Sedan</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">1.8L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">120,690 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Drive</span><span class="spec-value">FWD</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$3,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="chevrolet" data-type="suv" data-price="4495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/chevy-traverse-2015.jpg" alt="2015 Chevrolet Traverse 1LT AWD">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2015 Chevrolet Traverse 1LT AWD</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.6L V6 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">194,420 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Silver Ice</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$4,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── FORD ───────────────────────────────────────── -->
+
+        <article class="vehicle-card fade-in" data-make="ford" data-type="suv" data-price="9995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/ford-escape-2018.jpg" alt="2018 Ford Escape S FWD">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span><span class="badge badge-green">Low Miles</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2018 Ford Escape S FWD</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.5L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">40,116 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">White Gold</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$9,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="ford" data-type="truck" data-price="23995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/ford-f150-2020.jpg" alt="2020 Ford F-150 XL SuperCab 6.5-ft. 4WD">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-green">Truck</span><span class="badge badge-red">4WD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2020 Ford F-150 XL SuperCab 6.5-ft. 4WD</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.5L V6 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">38,670 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Magnetic</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$23,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── LAND ROVER ──────────────────────────────────── -->
+
+        <article class="vehicle-card fade-in" data-make="land rover" data-type="suv" data-price="24995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/landrover-velar-2021.jpg" alt="2021 Land Rover Range Rover Velar S">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Luxury SUV</span><span class="badge badge-red">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2021 Land Rover Range Rover Velar S</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">70,156 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Santorini Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$24,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── VOLKSWAGEN ──────────────────────────────────── -->
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="hatchback" data-price="6495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-gti-2010.jpg" alt="2010 Volkswagen GTI 2.0T Sedan PZEV">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Hatchback</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2010 Volkswagen GTI 2.0T Sedan PZEV</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">109,735 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Deep Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$6,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="hatchback" data-price="6495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-gti-2012.jpg" alt="2012 Volkswagen GTI 2-door">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Hatchback</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2012 Volkswagen GTI 2-door</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">142,929 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Carbon Steel Gray</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$6,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="sedan" data-price="4495" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-jetta-2014.jpg" alt="2014 Volkswagen Jetta S">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Great Value</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2014 Volkswagen Jetta S</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">160,016 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Reflex Silver</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$4,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="sedan" data-price="6995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-jetta-2015.jpg" alt="2015 Volkswagen Jetta SE 6A">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2015 Volkswagen Jetta SE 6A</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">1.8L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">138,980 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Black</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$6,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="sedan" data-price="5995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-jetta-2012.jpg" alt="2012 Volkswagen Jetta SE">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2012 Volkswagen Jetta SE</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.5L L5 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">125,566 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Reflex Silver</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$5,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="sedan" data-price="6995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-jetta-2015.jpg" alt="2018 Volkswagen Passat R-Line">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2018 Volkswagen Passat R-Line</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">166,555 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Urano Gray</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$6,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="hatchback" data-price="3995" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-rabbit-2007.jpg" alt="2007 Volkswagen Rabbit 2-Door">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Great Value</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2007 Volkswagen Rabbit 2-Door</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.5L L5 DOHC</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">162,916 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">6-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Black Uni</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$3,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volkswagen" data-type="suv" data-price="7895" role="listitem">
+          <div class="vehicle-img" aria-hidden="true"><img src="images/vw-tiguan-2020.jpg" alt="2020 Volkswagen Tiguan S">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">SUV</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2020 Volkswagen Tiguan S</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">155,619 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Pure White</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$7,895</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="volvo" data-type="suv" data-price="4995" role="listitem">
+          <div class="vehicle-img"><img src="images/volvo-xc60-2016.jpg" alt="2016 Volvo XC60 T5 Drive-E Premier FWD">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-gold">Great Value</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2016 Volvo XC60 T5 Drive-E Premier FWD</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">2.0L L4 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">157,006 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">Osmium Grey</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$4,995</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card fade-in" data-make="porsche" data-type="suv" data-price="30495" role="listitem">
+          <div class="vehicle-img"><img src="images/porsche-cayenne-2020.jpg" alt="2020 Porsche Cayenne Base">
+            <div class="vehicle-img-overlay"></div>
+            <div class="vehicle-badges"><span class="badge badge-red">SOLD</span><span class="badge badge-blue">AWD</span></div>
+          </div>
+          <div class="vehicle-body">
+            <h3 class="vehicle-title">2020 Porsche Cayenne Base</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item"><span class="spec-label">Engine</span><span class="spec-value">3.0L V6 TURBO</span></div>
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">73,257 mi</span></div>
+              <div class="spec-item"><span class="spec-label">Trans.</span><span class="spec-value">8-Speed Auto</span></div>
+              <div class="spec-item"><span class="spec-label">Exterior</span><span class="spec-value">White</span></div>
+            </div>
+            <div class="vehicle-footer">
+              <span class="vehicle-price">$30,495</span>
+              <a href="contact.html" class="view-btn">Inquire</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /grid -->
+
+      <!-- Disclaimer -->
+      <div style="margin-top: 48px; padding: 20px 24px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg); font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;">
+        <strong style="color: var(--text);">Napomena:</strong>
+        Sve objavljene cijene su u američkim dolarima (USD) i ne uključuju troškove transporta, carinu, PDV ni našu uslugu uvoza.
+        Koristite <a href="kalkulator.html" style="color:var(--accent)">kalkulator cijene</a> za procjenu ukupnih troškova dostave u BiH.
+        Dostupnost vozila nije garantovana i podliježe prethodnoj prodaji. Sve informacije o vozilima su tačne prema našem najboljem znanju.
+      </div>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
