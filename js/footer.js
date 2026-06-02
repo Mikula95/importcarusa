@@ -1,5 +1,5 @@
-/**
- * Shared footer — umetni na sve stranice.
+ï»¿/**
+ * Shared footer ï¿½ umetni na sve stranice.
  * HTML stranica treba imati: <div id="site-footer"></div>
  */
 (function () {
@@ -16,7 +16,7 @@
     '          <img src="images/import_cars_usa.jpg" alt="Importcarsusa" class="logo-img">',
     '        </div>',
     '        <p class="footer-desc">',
-    '          Vaš pouzdani partner za uvoz kvalitetnih automobila iz Amerike.',
+    '          Vaï¿½ pouzdani partner za uvoz kvalitetnih automobila iz Amerike.',
     '          Dostavljamo u BiH, SRB, CRO i MKD &middot; Transparentno i po najboljoj cijeni.',
     '        </p>',
     '        <div class="social-links">',
@@ -51,21 +51,17 @@
     '      <div class="footer-col">',
     '        <h4>Kontakt</h4>',
     '        <ul class="footer-links">',
-    '          <li>',
-    '            <a href="https://maps.google.com/?q=Banja+Luka+Bosnia" class="footer-link"',
-    '               target="_blank" rel="noopener noreferrer">',
-    '              &rsaquo; Banja Luka,<br>&nbsp;&nbsp;Republika Srpska, BiH',
-    '            </a>',
-    '          </li>',
-    '          <li><a href="tel:+38765426371" class="footer-link">&rsaquo; Mladen (BiH): +387 65 426 371</a></li>',
+    '          <li><a href="https://maps.google.com/?q=Banja+Luka+Bosnia" class="footer-link" target="_blank" rel="noopener noreferrer">&rsaquo; Banja Luka, Republika Srpska, BiH</a></li>',
     '          <li><a href="tel:+17733289278" class="footer-link">&rsaquo; Mirsad (USA): +1 (773) 328-9278</a></li>',
+    '          <li><a href="tel:+38765426371" class="footer-link">&rsaquo; Mladen (BiH): +387 65 426 371</a></li>',
     '          <li><a href="tel:+381649865581" class="footer-link">&rsaquo; Djordje (SRB): +381 64 986 5581</a></li>',
+    '          <li><a href="https://balkancargoline.com" class="footer-link" target="_blank" rel="noopener noreferrer">&rsaquo; balkancargoline.com</a></li>',
     '        </ul>',
     '      </div>',
     '',
     '    </div>',
     '    <div class="footer-bottom">',
-    '      <span>&copy; 2026 Importcarsusa. Sva prava zadržana.</span>',
+    '      <span>&copy; 2026 Importcarsusa. Sva prava zadrï¿½ana.</span>',
     '      <span>Banja Luka, Republika Srpska, BiH</span>',
     '    </div>',
     '  </div>',
