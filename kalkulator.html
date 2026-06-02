@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kalkulator cijene uvoza automobila iz Amerike — Importcarsusa. Izračunaj PDV, carinu, transport i ukupnu cijenu dostave u BiH.">
-  <title>Kalkulator Uvoza — Importcarsusa</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Kalkulator cijene uvoza automobila iz Amerike � Importcarsusa. Izracunaj PDV, carinu, transport i ukupnu cijenu dostave u BiH.">
+  <title>Kalkulator Uvoza � Importcarsusa</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
 
-  <!-- ═══════════════════ NAVBAR ═══════════════════════════ -->
+  <!-- ------------------- NAVBAR --------------------------- -->
   <nav class="navbar" role="navigation" aria-label="Glavna navigacija">
     <div class="container">
       <div class="nav-inner">
@@ -26,11 +26,15 @@
           <li><a href="kalkulator.html" class="nav-link active">Kalkulator</a></li>
           <li><a href="contact.html"    class="nav-link">Kontakt</a></li>
           <li><a href="contact.html"    class="nav-link nav-cta">Upit za Vozilo</a></li>
-          <li class="nav-phone" aria-label="Telefon">
+          <li class="nav-phone" aria-label="Phone number">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
             </svg>
-            <a href="tel:+38765329696">+387 65 329 696</a>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <a href="tel:+38765426371">Mladen (BiH): +387 65 426 371</a>
+              <a href="tel:+381649865581">Djordje (SRB): +381 64 986 5581</a>
+              <a href="tel:+17733289278">Mirsad (USA): +1 (773) 328-9278</a>
+            </div>
           </li>
         </ul>
 
@@ -41,28 +45,28 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════ PAGE HERO ════════════════════════ -->
+  <!-- ------------------- PAGE HERO ------------------------ -->
   <div class="page-hero">
     <div class="container">
       <div class="title-bar" style="margin: 0 auto 12px;"></div>
       <h1>Kalkulator <span style="color:var(--accent)">Uvoza</span></h1>
-      <p>Izračunaj ukupnu cijenu automobila iz Amerike do Banje Luke</p>
+      <p>Izracunaj ukupnu cijenu automobila iz Amerike do Banje Luke</p>
     </div>
   </div>
 
-  <!-- ═══════════════════ CALCULATOR ══════════════════════ -->
+  <!-- ------------------- CALCULATOR ---------------------- -->
   <main class="calc-page">
     <div class="container">
 
       <div class="calc-grid">
 
-        <!-- ── LEFT: Calculator form ── -->
+        <!-- -- LEFT: Calculator form -- -->
         <div class="calc-form-wrap fade-in">
           <div class="title-bar"></div>
           <h2>Unesite <span>Podatke</span></h2>
           <p class="calc-intro">
             Unesite cijenu automobila i kurs USD/BAM da biste dobili
-            procjenu ukupnih troškova uvoza Chicago → Banja Luka.
+            procjenu ukupnih tro�kova uvoza Chicago ? Banja Luka.
           </p>
 
           <form id="calcForm" novalidate aria-label="Kalkulator uvoza">
@@ -90,7 +94,7 @@
 
             <div class="calc-field-group">
               <label class="form-label" for="exchangeRate">
-                Kurs USD → BAM
+                Kurs USD ? BAM
                 <span class="form-hint">Trenutni kurs (npr. 1.85 BAM za 1 USD)</span>
               </label>
               <div class="input-prefix-wrap">
@@ -114,23 +118,23 @@
               <h4>Fiksni parametri uvoza</h4>
               <div class="fixed-params">
                 <div class="fixed-param">
-                  <span class="fp-label">🚢 Transport Chicago → Banja Luka</span>
+                  <span class="fp-label">?? Transport Chicago ? Banja Luka</span>
                   <span class="fp-value">$3.000</span>
                 </div>
                 <div class="fixed-param">
-                  <span class="fp-label">🏛️ Carina (BiH)</span>
+                  <span class="fp-label">??? Carina (BiH)</span>
                   <span class="fp-value">15%</span>
                 </div>
                 <div class="fixed-param">
-                  <span class="fp-label">🧾 PDV</span>
+                  <span class="fp-label">?? PDV</span>
                   <span class="fp-value">17%</span>
                 </div>
                 <div class="fixed-param">
-                  <span class="fp-label">🔧 Importcarsusa usluga</span>
+                  <span class="fp-label">?? Importcarsusa usluga</span>
                   <span class="fp-value">10%</span>
                 </div>
                 <div class="fixed-param">
-                  <span class="fp-label">🔑 Homologacija</span>
+                  <span class="fp-label">?? Homologacija</span>
                   <span class="fp-value">1.530 KM</span>
                 </div>
               </div>
@@ -141,20 +145,20 @@
                 <rect x="2" y="3" width="20" height="18" rx="2"/>
                 <path d="M8 7h8M8 12h5M8 17h3"/>
               </svg>
-              Izračunaj Cijenu
+              Izracunaj Cijenu
             </button>
 
           </form>
         </div>
 
-        <!-- ── RIGHT: Result breakdown ── -->
+        <!-- -- RIGHT: Result breakdown -- -->
         <div class="calc-result-wrap fade-in fade-in-delay-1" id="calcResult" aria-live="polite">
 
           <!-- Empty state -->
           <div class="calc-empty" id="calcEmpty">
-            <div class="calc-empty-icon" aria-hidden="true">🚗</div>
+            <div class="calc-empty-icon" aria-hidden="true">??</div>
             <h3>Unesite cijenu vozila</h3>
-            <p>Rezultat će se prikazati ovdje čim unesete cijenu automobila i pritisnete dugme.</p>
+            <p>Rezultat ce se prikazati ovdje cim unesete cijenu automobila i pritisnete dugme.</p>
           </div>
 
           <!-- Result state (hidden until calculated) -->
@@ -163,19 +167,19 @@
             <div class="calc-result-header">
               <div class="title-bar"></div>
               <h2>Ukupna <span>Cijena</span></h2>
-              <p class="calc-route">Chicago <span>→</span> Banja Luka</p>
+              <p class="calc-route">Chicago <span>?</span> Banja Luka</p>
             </div>
 
             <div class="calc-rows">
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">🚗</span> Cijena vozila (SAD)
+                  <span class="cr-icon">??</span> Cijena vozila (SAD)
                 </span>
-                <span class="cr-value" id="rCarPrice">—</span>
+                <span class="cr-value" id="rCarPrice">�</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">🚢</span> Transport (Chicago → BL)
+                  <span class="cr-icon">??</span> Transport (Chicago ? BL)
                 </span>
                 <span class="cr-value" id="rShipping">$3.000</span>
               </div>
@@ -183,34 +187,34 @@
                 <span class="cr-label cr-sub">
                   Carinska vrijednost (vozilo + transport)
                 </span>
-                <span class="cr-value cr-sub" id="rCustomsBase">—</span>
+                <span class="cr-value cr-sub" id="rCustomsBase">�</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">🏛️</span> Carina 15%
+                  <span class="cr-icon">???</span> Carina 15%
                 </span>
-                <span class="cr-value" id="rCarina">—</span>
+                <span class="cr-value" id="rCarina">�</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">🧾</span> PDV 17%
+                  <span class="cr-icon">??</span> PDV 17%
                   <small class="cr-note">(od carinska vr. + carina)</small>
                 </span>
-                <span class="cr-value" id="rPDV">—</span>
+                <span class="cr-value" id="rPDV">�</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">🔧</span> Importcarsusa usluga 10%
+                  <span class="cr-icon">??</span> Importcarsusa usluga 10%
                   <small class="cr-note">(od cijene vozila)</small>
                 </span>
-                <span class="cr-value" id="rUsluga">—</span>
+                <span class="cr-value" id="rUsluga">�</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">🔑</span> Homologacija
+                  <span class="cr-icon">??</span> Homologacija
                   <small class="cr-note">(fiksno, KM)</small>
                 </span>
-                <span class="cr-value" id="rHomologacija">—</span>
+                <span class="cr-value" id="rHomologacija">�</span>
               </div>
             </div>
 
@@ -218,12 +222,12 @@
 
             <div class="calc-total-usd">
               <span>Ukupno (USD)</span>
-              <span id="rTotalUSD" class="total-usd-value">—</span>
+              <span id="rTotalUSD" class="total-usd-value">�</span>
             </div>
 
             <div class="calc-total-bam">
               <div class="total-bam-label">Ukupno (BAM)</div>
-              <div id="rTotalBAM" class="total-bam-value">—</div>
+              <div id="rTotalBAM" class="total-bam-value">�</div>
               <div class="total-bam-note" id="rRateNote">po kursu 1 USD = 1.85 BAM</div>
             </div>
 
@@ -232,17 +236,17 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
                 </svg>
-                Pošalji Upit
+                Po�alji Upit
               </a>
               <button class="btn btn-outline" id="calcReset">
-                Ponovo Izračunaj
+                Ponovo Izracunaj
               </button>
             </div>
 
             <p class="calc-disclaimer">
-              * Procjena je informativna. Tačan iznos carine i PDV-a utvrđuje
+              * Procjena je informativna. Tacan iznos carine i PDV-a utvrduje
               Uprava za indirektno oporezivanje BiH na osnovu carinske vrijednosti
-              vozila. Usluga Importcarsusa podliježe posebnom ugovoru.
+              vozila. Usluga Importcarsusa podlije�e posebnom ugovoru.
             </p>
 
           </div>
@@ -250,50 +254,50 @@
 
       </div><!-- /calc-grid -->
 
-      <!-- ── HOW IT WORKS ── -->
-      <section class="how-it-works fade-in" aria-label="Kako funkcioniše uvoz">
+      <!-- -- HOW IT WORKS -- -->
+      <section class="how-it-works fade-in" aria-label="Kako funkcioni�e uvoz">
         <div class="section-header" style="text-align:center; margin-bottom:40px">
           <div class="title-bar" style="margin: 0 auto 8px;"></div>
-          <h2 class="section-title">Kako <span>Funkcioniše</span></h2>
-          <p class="section-subtitle">Korak po korak do vašeg američkog automobila u BiH</p>
+          <h2 class="section-title">Kako <span>Funkcioni�e</span></h2>
+          <p class="section-subtitle">Korak po korak do va�eg americkog automobila u BiH</p>
         </div>
 
         <div class="steps-grid">
           <div class="step-card">
             <div class="step-num">01</div>
-            <div class="step-icon" aria-hidden="true">🔍</div>
+            <div class="step-icon" aria-hidden="true">??</div>
             <h3>Odabir vozila</h3>
-            <p>Pregledajte naš inventar ili nam recite koje vozilo tražite. Naš tim pronalazi vozilo po vašim zahtjevima u SAD.</p>
+            <p>Pregledajte na� inventar ili nam recite koje vozilo tra�ite. Na� tim pronalazi vozilo po va�im zahtjevima u SAD.</p>
           </div>
           <div class="step-card">
             <div class="step-num">02</div>
-            <div class="step-icon" aria-hidden="true">💰</div>
+            <div class="step-icon" aria-hidden="true">??</div>
             <h3>Procjena cijene</h3>
-            <p>Koristite kalkulator gore za brzu procjenu. Kontaktirajte nas za tačnu ponudu sa svim troškovima unaprijed — bez iznenađenja.</p>
+            <p>Koristite kalkulator gore za brzu procjenu. Kontaktirajte nas za tacnu ponudu sa svim tro�kovima unaprijed � bez iznenadenja.</p>
           </div>
           <div class="step-card">
             <div class="step-num">03</div>
-            <div class="step-icon" aria-hidden="true">🚢</div>
+            <div class="step-icon" aria-hidden="true">??</div>
             <h3>Transport</h3>
-            <p>Vozilo se ukrcava u Chicagu i brodskim kontejnerskim transportom dolazi do luke. Prosječno vrijeme: 6–8 sedmica.</p>
+            <p>Vozilo se ukrcava u Chicagu i brodskim kontejnerskim transportom dolazi do luke. Prosjecno vrijeme: 6�8 sedmica.</p>
           </div>
           <div class="step-card">
             <div class="step-num">04</div>
-            <div class="step-icon" aria-hidden="true">🏛️</div>
+            <div class="step-icon" aria-hidden="true">???</div>
             <h3>Carina i PDV</h3>
-            <p>Naš tim se brine o kompletnoj carinskoj proceduri u BiH. Carina 15% + PDV 17% se plaća pri uvozu.</p>
+            <p>Na� tim se brine o kompletnoj carinskoj proceduri u BiH. Carina 15% + PDV 17% se placa pri uvozu.</p>
           </div>
           <div class="step-card">
             <div class="step-num">05</div>
-            <div class="step-icon" aria-hidden="true">🔑</div>
+            <div class="step-icon" aria-hidden="true">??</div>
             <h3>Preuzimanje</h3>
-            <p>Vozilo se dostavlja direktno u Banju Luku. Vi preuzimate ključeve i svu dokumentaciju — spremno za registraciju.</p>
+            <p>Vozilo se dostavlja direktno u Banju Luku. Vi preuzimate kljuceve i svu dokumentaciju � spremno za registraciju.</p>
           </div>
           <div class="step-card">
             <div class="step-num">06</div>
-            <div class="step-icon" aria-hidden="true">📋</div>
+            <div class="step-icon" aria-hidden="true">??</div>
             <h3>Registracija</h3>
-            <p>Pomažemo pri pribavljanju potrebnih dokumenata za registraciju vozila u BiH. Koristite vozilo odmah!</p>
+            <p>Poma�emo pri pribavljanju potrebnih dokumenata za registraciju vozila u BiH. Koristite vozilo odmah!</p>
           </div>
         </div>
       </section>
@@ -313,7 +317,7 @@
   <script src="js/footer.js"></script>
   <script src="js/main.js"></script>
   <script>
-    /* ── Import Price Calculator ──────────────────────────── */
+    /* -- Import Price Calculator ---------------------------- */
     (function () {
       const SHIPPING   = 3000;   // fixed USD
       const CARINA_PCT = 0.15;   // 15%

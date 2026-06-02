@@ -1,5 +1,5 @@
-﻿/**
- * Shared footer — umetni na sve stranice.
+/**
+ * Shared footer � umetni na sve stranice.
  * HTML stranica treba imati: <div id="site-footer"></div>
  */
 (function () {
@@ -16,9 +16,8 @@
     '          <img src="images/import_cars_usa.jpg" alt="Importcarsusa" class="logo-img">',
     '        </div>',
     '        <p class="footer-desc">',
-    '          Vaš pouzdani partner za uvoz kvalitetnih automobila iz Amerike.',
-    '          Chicago &rarr; Banja Luka &middot; Transparentno i po najboljoj cijeni.',
-    '          Dostava na kućnu adresu širom BiH.',
+    '          Va� pouzdani partner za uvoz kvalitetnih automobila iz Amerike.',
+    '          Dostavljamo u BiH, SRB, CRO i MKD &middot; Transparentno i po najboljoj cijeni.',
     '        </p>',
     '        <div class="social-links">',
     '          <a href="https://www.facebook.com/mamotorslnc/" class="social-link"',
@@ -53,24 +52,20 @@
     '        <h4>Kontakt</h4>',
     '        <ul class="footer-links">',
     '          <li>',
-    '            <a href="https://maps.google.com/?q=Ulica+Cara+Dušana+bb,+Kotor+Varoš,+Bosnia" class="footer-link"',
+    '            <a href="https://maps.google.com/?q=Banja+Luka+Bosnia" class="footer-link"',
     '               target="_blank" rel="noopener noreferrer">',
-    '              &rsaquo; Ulica Cara Dušana bb, Kotor Varoš,<br>&nbsp;&nbsp;Republika Srpska, BiH',
+    '              &rsaquo; Banja Luka,<br>&nbsp;&nbsp;Republika Srpska, BiH',
     '            </a>',
     '          </li>',
-    '          <li>',
-    '            <a href="https://maps.google.com/?q=Banja+Luka,+Bosnia" class="footer-link"',
-    '               target="_blank" rel="noopener noreferrer">',
-    '              &rsaquo; Banja Luka, Republika Srpska, BiH',
-    '            </a>',
-    '          </li>',
-    '          <li><a href="tel:+38765329696" class="footer-link">&rsaquo; +387 65 329 696</a></li>',
+    '          <li><a href="tel:+38765426371" class="footer-link">&rsaquo; Mladen (BiH): +387 65 426 371</a></li>',
+    '          <li><a href="tel:+17733289278" class="footer-link">&rsaquo; Mirsad (USA): +1 (773) 328-9278</a></li>',
+    '          <li><a href="tel:+381649865581" class="footer-link">&rsaquo; Djordje (SRB): +381 64 986 5581</a></li>',
     '        </ul>',
     '      </div>',
     '',
     '    </div>',
     '    <div class="footer-bottom">',
-    '      <span>&copy; 2026 Importcarsusa. Sva prava zadržana.</span>',
+    '      <span>&copy; 2026 Importcarsusa. Sva prava zadr�ana.</span>',
     '      <span>Banja Luka, Republika Srpska, BiH</span>',
     '    </div>',
     '  </div>',
