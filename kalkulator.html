@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kalkulator cijene uvoza automobila iz Amerike � Importcarsusa. Izracunaj PDV, carinu, transport i ukupnu cijenu dostave u BiH.">
+  <meta name="description" content="Kalkulator cijene uvoza automobila iz Amerike – Importcarsusa. Izracunaj PDV, carinu, transport i ukupnu cijenu dostave u BiH.">
   <title>Kalkulator Uvoza - Importcarsusa</title>
   <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +94,7 @@
 
             <div class="calc-field-group">
               <label class="form-label" for="exchangeRate">
-                Kurs USD ? BAM
+                Kurs USD → BAM
                 <span class="form-hint">Trenutni kurs (npr. 1.75 BAM za 1 USD)</span>
               </label>
               <div class="input-prefix-wrap">
@@ -156,7 +156,7 @@
 
           <!-- Empty state -->
           <div class="calc-empty" id="calcEmpty">
-            <div class="calc-empty-icon" aria-hidden="true">??</div>
+            <div class="calc-empty-icon" aria-hidden="true">🧮</div>
             <h3>Unesite cijenu vozila</h3>
             <p>Rezultat ce se prikazati ovdje cim unesete cijenu automobila i pritisnete dugme.</p>
           </div>
@@ -167,19 +167,19 @@
             <div class="calc-result-header">
               <div class="title-bar"></div>
               <h2>Ukupna <span>Cijena</span></h2>
-              <p class="calc-route">Chicago <span>?</span> Banja Luka</p>
+              <p class="calc-route">Chicago <span>→</span> Banja Luka</p>
             </div>
 
             <div class="calc-rows">
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">??</span> Cijena vozila (SAD)
+                  <span class="cr-icon">🚗</span> Cijena vozila (SAD)
                 </span>
-                <span class="cr-value" id="rCarPrice">�</span>
+                <span class="cr-value" id="rCarPrice">–</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">??</span> Transport (Chicago ? BL)
+                  <span class="cr-icon">🚚</span> Transport (Chicago → BL)
                 </span>
                 <span class="cr-value" id="rShipping">$3.000</span>
               </div>
@@ -187,34 +187,34 @@
                 <span class="cr-label cr-sub">
                   Carinska vrijednost (vozilo + transport)
                 </span>
-                <span class="cr-value cr-sub" id="rCustomsBase">�</span>
+                <span class="cr-value cr-sub" id="rCustomsBase">–</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">???</span> Carina 15%
+                  <span class="cr-icon">🛃</span> Carina 15%
                 </span>
-                <span class="cr-value" id="rCarina">�</span>
+                <span class="cr-value" id="rCarina">–</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">??</span> PDV 17%
+                  <span class="cr-icon">💰</span> PDV 17%
                   <small class="cr-note">(od carinska vr. + carina)</small>
                 </span>
-                <span class="cr-value" id="rPDV">�</span>
+                <span class="cr-value" id="rPDV">–</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">??</span> Importcarsusa usluga 10%
+                  <span class="cr-icon">🛠️</span> Importcarsusa usluga 10%
                   <small class="cr-note">(od cijene vozila)</small>
                 </span>
-                <span class="cr-value" id="rUsluga">�</span>
+                <span class="cr-value" id="rUsluga">–</span>
               </div>
               <div class="calc-row">
                 <span class="cr-label">
-                  <span class="cr-icon">??</span> Homologacija
+                  <span class="cr-icon">📄</span> Homologacija
                   <small class="cr-note">(fiksno, KM)</small>
                 </span>
-                <span class="cr-value" id="rHomologacija">�</span>
+                <span class="cr-value" id="rHomologacija">–</span>
               </div>
             </div>
 
@@ -222,12 +222,12 @@
 
             <div class="calc-total-usd">
               <span>Ukupno (USD)</span>
-              <span id="rTotalUSD" class="total-usd-value">�</span>
+              <span id="rTotalUSD" class="total-usd-value">–</span>
             </div>
 
             <div class="calc-total-bam">
               <div class="total-bam-label">Ukupno (BAM)</div>
-              <div id="rTotalBAM" class="total-bam-value">�</div>
+              <div id="rTotalBAM" class="total-bam-value">–</div>
               <div class="total-bam-note" id="rRateNote">po kursu 1 USD = 1.85 BAM</div>
             </div>
 
@@ -236,7 +236,7 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
                 </svg>
-                Po�alji Upit
+                Pošalji Upit
               </a>
               <button class="btn btn-outline" id="calcReset">
                 Ponovo Izracunaj

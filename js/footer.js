@@ -1,5 +1,5 @@
 ﻿/**
- * Shared footer � umetni na sve stranice.
+ * Shared footer – umetni na sve stranice.
  * HTML stranica treba imati: <div id="site-footer"></div>
  */
 (function () {
@@ -16,7 +16,7 @@
     '          <img src="images/import_cars_usa.jpg" alt="Importcarsusa" class="logo-img">',
     '        </div>',
     '        <p class="footer-desc">',
-    '          Va� pouzdani partner za uvoz kvalitetnih automobila iz Amerike.',
+    '          Vaš pouzdani partner za uvoz kvalitetnih automobila iz Amerike.',
     '          Dostavljamo u BiH, SRB, CRO i MKD &middot; Transparentno i po najboljoj cijeni.',
     '        </p>',
     '        <div class="social-links">',
@@ -61,7 +61,7 @@
     '',
     '    </div>',
     '    <div class="footer-bottom">',
-    '      <span>&copy; 2026 Importcarsusa. Sva prava zadr�ana.</span>',
+    '      <span>&copy; 2026 Importcarsusa. Sva prava zadržana.</span>',
     '      <span>Banja Luka, Republika Srpska, BiH</span>',
     '    </div>',
     '  </div>',
