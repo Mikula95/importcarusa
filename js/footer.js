@@ -53,7 +53,7 @@
     '        <ul class="footer-links">',
     '          <li><a href="https://maps.google.com/?q=Banja+Luka+Bosnia" class="footer-link" target="_blank" rel="noopener noreferrer">&rsaquo; Banja Luka, Republika Srpska, BiH</a></li>',
     '          <li><a href="tel:+17733289278" class="footer-link">&rsaquo; Mirsad (USA): +1 (773) 328-9278</a></li>',
-    '          <li><a href="tel:+38765426371" class="footer-link">&rsaquo; Mladen (BiH): +387 65 426 371</a></li>',
+    '          <li><a href="tel:+38765789338" class="footer-link">&rsaquo; Mladen (BiH): +387 65 789 338</a></li>',
     '          <li><a href="tel:+381649865581" class="footer-link">&rsaquo; Djordje (SRB): +381 64 986 5581</a></li>',
     '          <li><a href="https://balkancargoline.com" class="footer-link" target="_blank" rel="noopener noreferrer">&rsaquo; balkancargoline.com</a></li>',
     '        </ul>',
